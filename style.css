@@ -79,3 +79,16 @@ a:hover {
   flex-basis: 60%;
   text-align: left;
 }
+
+.blog-layout {
+  display: flex;
+  align-items: left;
+  gap: 60px;
+}
+
+.blog-layout img {
+  width: 40%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
