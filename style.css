@@ -92,3 +92,97 @@ a:hover {
   height: auto;
   object-fit: cover;
 }
+
+/* ------------------ */
+/* Blog page styling  */
+/* ------------------ */
+
+.blog-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.blog-list li {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* Blog links: slightly more prominent than normal links */
+.blog-list a {
+  color: #111;
+  font-weight: 500;
+}
+
+/* Subtle editorial dash */
+.blog-list li::before {
+  content: "— ";
+  color: #777;
+}
+
+/* Blog page heading */
+.content h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* ---------------------- */
+/* Individual blog posts  */
+/* ---------------------- */
+
+.blog-post {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Main post title */
+.blog-post h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Subtitle under title */
+.post-subtitle {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Date / meta line */
+.post-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 28px;
+}
+
+/* Paragraph spacing and readability */
+.blog-post p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+/* Images inside posts */
+.blog-post figure {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.blog-post img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image captions */
+.blog-post figcaption {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+/* Links inside blog posts */
+.blog-post a {
+  color: #1a0dab;
+}
