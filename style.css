@@ -186,3 +186,13 @@ a:hover {
 .blog-post a {
   color: #1a0dab;
 }
+
+
+/* Specific styling for blog page content */
+.blog-content {
+  margin-top: 0;       /* start at top of page */
+  padding: 20px;       /* optional: inner spacing */
+  max-width: 800px;    /* optional: limit width for readability */
+  margin-left: auto;   /* center horizontally */
+  margin-right: auto;  /* center horizontally */
+}
