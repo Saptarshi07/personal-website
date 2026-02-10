@@ -196,3 +196,7 @@ a:hover {
   margin-left: auto;   /* center horizontally */
   margin-right: auto;  /* center horizontally */
 }
+
+.blog-content h2 {
+    margin-bottom: 30px; /* Adjust this number to increase/decrease the gap */
+}
