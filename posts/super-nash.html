@@ -2,10 +2,10 @@
 <html>
 <head>
   <title>Post Title Goes Here</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=3">
 </head>
-<body>
 
+<body>
   <nav>
     <a href="../index.html">Home</a>
     <a href="../about.html">Publications</a>
@@ -14,50 +14,71 @@
   </nav>
 
   <div class="content blog-post">
-
     <h1>Breaking simultaneity in direct reciprocity models.</h1>
-    <h2 class="post-subtitle">The story behind the project with Philip and Lenz.</h2>
-    <p class="post-meta">January 20, 2026</p>
+    <h2 class="post-subtitle">A blog on a <a href="https://academic.oup.com/pnasnexus/article/5/2/pgag005/8425146?login=false">recent paper</a> with <a href="https://philiplaporte.github.io/">Philip</a> and <a href="https://lenzpracher.github.io/">Lenz</a>.</h2>
+    <p class="post-meta">April 19, 2026</p>
 
-    <p> In the works at the moment! Read our paper at <a href="https://academic.oup.com/pnasnexus/article/5/2/pgag005/8425146?login=false">PNAS Nexus</a></p>
-   <!-- <p>
-      In Fall 2024, Lenz was visiting as an intern to Harvard Math from Munich. 
-      Coincidentally, at the same time, Philip was also a visiting graduate student from Berkeley. 
-      Philip and Lenz were involved in a little project together where they were trying to characterize memory-1 Nash equilibrium strategies of repeated Snowdrift games.
-      A Snowdrift game (also called Chicken) shares the same payoff structure as a hawk-dove game:
-      a player is better off by playing the opposite action of their co-player than playing the same.-->
+<p> It seems like every other day my inbox receives a Google Scholar alert for yet another paper on direct reciprocity. 
+      The consistent fascination with this field seems to arise from the fact that <em> model of direct reciprocity </em> is remarkably simple yet still surprisingly open to more investigations.
+      The setup is basic. The formulas are easy to derive. 
+      The usual pipeline for research is easy to implement. 
+      After a few days, you can even start performing investigations of your own. 
+      It is, however, unlikely that you will find something that is completely new, despite possibilities for questions being endless. 
+      Afterall, people have been working on these things for a fairly long time. 
+      </p>
 
-    <!--<p>
-      This is the second paragraph. You can develop an argument, tell a story,
-      or reflect on something. Plain HTML paragraphs are perfect here.
-    </p>
+    <p> But what is direct reciprocity?
+        Direct reciprocity, popularly understood as a biological phenomenon, is, at least to me, nearly synonymous with the model of repeated games. 
+        I suspect this is also true for many researchers in evolutionary game theory. 
+        The biological phenomenon is stable reciprocal cooperation between two individuals. Examples include <a href="https://www.nature.com/articles/308181a0">vampire bats sharing food</a> (in their case, blood) reciprocally, <a href="https://www.nature.com/articles/325433a0.pdf">stickleback fish taking turns when inspecting a predator</a>, or when <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/eth.13407">humans maintain mutually beneficial relationships</a>.
+        The near-synonymy of direct reciprocity (the phenomenon) with repeated games (the mathematical model) has arisen from the fact that a single class of repeated game, the <em> iterated prisoner's dilemma, </em> has been sufficient, historically speaking, to study various questions pertaining to reciprocal cooperation. 
+        This is not to say that the iterated prisoner's dilemma is by any means the <em>only</em> model of reciprocal cooperation. 
+        Thus, when researchers write papers on direct reciprocity, they might just be writing about properties of repeated two-player games (that may or may not be the iterated prisoner's dilemma).  
+    
+    <p> We do the same in this paper. We identify a primary assumption in the repeated game model and ask what follows from such an assumption. 
+        Our findings, thus, apply to not just the iterated prisoner's dilemma (and thus direct reciprocity), but also to any repeated two-player game. 
+        The assumption in question is: <em>simultaneity in actions</em>. 
+        
+    <p> In the standard repeated game model, players act simultaneously at every round, or equivalently, are in complete ignorance of their opponent's impending move in the present round.
+        We ask, what if this is not the case?
+        What if players, with some probability, come to know what their co-player has decided to do in the upcoming round?
+        Would this extra bit of information help them in any way?
+        Would it destabilize relationships that are otherwise stable when players are completely unaware of what their partner will do? 
+        These are the sorts of questions we address in this paper. (At this point, I must confess that we did not begin our collaboration with this question in mind; we were working on something completely different when we stumbled upon our main discovery).
 
-    <figure>
-      <img src="../assets/example1.jpg" alt="Descriptive alt text">
-      <figcaption>An optional caption explaining the image.</figcaption>
-    </figure>
+    <p> To answer these questions we develop several useful concepts. One such concept is <em>leader-follower stability</em>. 
+        When actions of player 1 and player 2 depend only on history and not on present-round information (meaning players use "memory-only" strategies), their strategy combination (also called a <em>profile</em>) is leader-follower stable if neither player can benefit in the long-run from becoming the follower in the interaction (i.e., having the extra bit of information about what their co-player, the leader, has chosen to play in the present round).
+        Since a follower may, in principle, disregard this extra information, leader-follower stable profiles are also Nash equilibrium profiles.
+        One may notice that it is not possible for both players to assume the follower position in a particular round since that would introduce a causal fallacy: if both of us are followers, my decision depends on what I know you will do, but, at the same time, this action you are supposed to play depends on what I will do. 
+        
+    <p> Leader-follower stability is a desirable property for a Nash equilibrium. 
+        It implies that the equilibrium is stable even if simultaneity is no longer maintained in the move-order. 
+        Alternatively, it may indicate that the equilibrium is safe from externalities like players developing wizardly predictive power.
+        It is also safe if a player develops a trait that faithfully gives away their upcoming action.
+        At the outset, it may appear that one is asking for too much when they are asking for a leader-follower stable equilibrium.
+        We prove that this is not the case for memory-1 equilibria in two-player, two-action games. More precisely, we show that all Nash equilibria belonging to a <em> major </em> class of memory-1 Nash equilibria are leader-follower stable. 
+        This is one of our main results. (In fact, we use this property to completely classify this major class in an arbitrary two-player, two-action game).
 
-    <p>
-      After the image, the text continues naturally. This is useful when you
-      want images to punctuate ideas rather than dominate the page.
-    </p>
+    <p> For our other main result, we derive a key result that helps to check whether an arbitrary bounded-memory profile is leader-follower stable.
+        We observe that verifying whether an arbitrary profile is leader-follower stable requires far fewer checks than confirming whether it is a Nash equilibrium.
+        For example, for memory-1 profiles, it takes at most 64 payoff comparisons to check Nash but at most 8 to check leader-follower stability.
+        In our paper we talk more about how the mere consideration of a leader-follower model makes payoff computations in the original, simultaneous-move model, simpler. 
 
-    <p>
-      Another paragraph. You can keep stacking these without worrying about
-      layout—CSS will take care of spacing.
-    </p>
+    <p> We also show, using counterexamples, that the remarkable property of major memory-1 equilibria (leader-follower stability) does not extend to equilibria of higher memory.
+        Neither does it extend to memory-1 equilibria in games with more than two actions. 
+        Therefore, this property of memory-1 equilbria in two-action games seems to be fairly special. 
+        We think there is an opportunity to do further work in this direction: how frequently are Nash equilibria also leader-follower stable?
 
-    <figure>
-      <img src="../assets/example2.jpg" alt="Another descriptive alt text">
-      <figcaption>Another optional caption.</figcaption>
-    </figure>
+    <p> Another promising research direction concerns the evolutionary consequences of leader-follower move order. So far, our analysis has focused primarily on how static solution concepts, such as Nash equilibrium, are affected by asynchronous move order.
+        Preliminary evolutionary simulations (also reported in our paper) suggest that staggered move order has a noticeable impact on the strategies that emerge in the donation game, a standard model of cooperation. 
+        In particular, although leaders are predicted in theory to adopt conditionally cooperative strategies at equilibrium, they often fail to learn such strategies as the degree of asynchrony increases.
+        More broadly, cooperation does not appear to emerge robustly when move order is disrupted. A deeper investigation is therefore needed to better understand these evolutionary dynamics.
 
-    <p>
-      Closing paragraph or concluding thought. Wrap things up or leave the
-      reader with something to think about.
-    </p>-->
 
+    <p> Please reach out to either me or Philip if you have more questions about our work! We are very happy to discuss!
+
+
+    <!-- more paragraphs -->
   </div>
-
 </body>
 </html>

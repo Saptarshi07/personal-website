@@ -1,34 +1,28 @@
-/* Reset */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  padding: 16px 0;           /* height of the bar */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Body: no top padding */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 120px 0 40px;     /* <<< KEY LINE: push content below nav */
+  /* 120px ≈ nav height + comfortable gap; adjust 100–140 if needed */
 }
 
-nav {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #1a0dab;
-  font-weight: bold;
-}
-
-
+/* Content starts below the nav */
 .content {
-  max-width: 1200px;
+  max-width: 720px;
   width: 90%;
+  margin: 0 auto;
   text-align: left;
-  margin-top: 80px;
 }
 
 /* Home page layout with image and text */
@@ -51,6 +45,22 @@ a {
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+/* make nav links look like tabs */
+nav a {
+  font-weight: bold;        /* bold */
+  color: #1a0dab;
+  text-decoration: none;        /* or whatever blue you used before */
+}
+
+nav a:hover {
   text-decoration: underline;
 }
 
@@ -136,14 +146,12 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Main post title */
 .blog-post h1 {
   font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin: 0 0 8px;           /* no top margin; avoids any remaining overlap */
 }
 
-/* Subtitle under title */
 .post-subtitle {
   font-size: 1rem;
   font-weight: normal;
@@ -151,14 +159,12 @@ a:hover {
   margin-bottom: 6px;
 }
 
-/* Date / meta line */
 .post-meta {
   font-size: 0.8rem;
   color: #777;
   margin-bottom: 28px;
 }
 
-/* Paragraph spacing and readability */
 .blog-post p {
   margin-bottom: 18px;
   line-height: 1.7;
@@ -187,14 +193,15 @@ a:hover {
   color: #1a0dab;
 }
 
+
 .blog-content {
-  margin-top: 0;
   padding-top: 1px; /* This "contains" the inner H2 margin */
   padding-left: 20px;
   padding-right: 20px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  margin: 80px auto 0 auto; /* ← key line */
 }
 
 .blog-content h2 {
