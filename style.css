@@ -2,26 +2,27 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   background: white;
   z-index: 1000;
-  padding: 16px 0;           /* height of the bar */
+  padding: 16px 40px;      /* vertical + horizontal padding */
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center; /* center the tabs */
+  align-items: center;
+  gap: 32px;               /* space between Home / Publications / … */
 }
 
-/* Body: no top padding */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 120px 0 40px;     /* <<< KEY LINE: push content below nav */
-  /* 120px ≈ nav height + comfortable gap; adjust 100–140 if needed */
+  padding: 120px 0 40px;   /* space under fixed nav + bottom padding */
 }
 
-/* Content starts below the nav */
 .content {
-  max-width: 720px;
+  max-width: 1200px;       /* wider, more “full-page” feel */
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto;          /* center horizontally */
   text-align: left;
 }
 
